@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: darkgray;
+}
+
+.audio {
+  margin-bottom: 16px;
+  height: 55px;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.component {
+  position: relative;
+  top: -900px;
+  margin-bottom: -2px;
+}
+
+.playing > .component {
+  animation-play-state: running;
+}
+
+.paused > .component {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .top {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 25.5s;
+    z-index: 5;
+  }
+  .tomat {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 20.5s;
+    z-index: 4;
+  }
+  .letuc {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 15.5s;
+    margin-bottom: -25px;
+    z-index: 3;
+  }
+  .ches {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 10.5s;
+    z-index: 2;
+  }
+  .patty {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 5.5s;
+    z-index: 1;
+  }
+  .bottom {
+    animation: stack 1 5s linear forwards;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes stack {
+  from {
+  }
+  to {
+    transform: translateY(900px);
+  }
+}
